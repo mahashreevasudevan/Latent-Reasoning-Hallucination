@@ -137,6 +137,15 @@ This work has three practical implications.
 
 **Datasets**
 
-- [GSM8K](https://huggingface.co/datasets/openai/gsm8k) — grade school math word problems
+- [GSM8K](https://huggingface.co/datasets/openai/gsm8k) — grade school math word problems 
 - [AQuA-RAT](https://huggingface.co/datasets/deepmind/aqua_rat) — algebraic multiple-choice with rationales
-- Custom cognitive-trap dataset 
+- Custom cognitive-trap dataset
+
+  ## Code
+
+- sample_datasets.py - samples GSM8K and AQuA-RAT
+- collect_benchmarks.py - collects responses for all 6 models on benchmarks
+- collect_gptoss.py - targeted run for GPT-OSS on custom dataset
+- collect_small_models.py - targeted run for smaller models on custom dataset
+- collect_qwen3_235b.py - Cerebras script for future Qwen3-235B extension
+- poster_charts.py - Generates Results
