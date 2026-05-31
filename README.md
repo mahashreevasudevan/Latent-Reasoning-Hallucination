@@ -54,7 +54,7 @@ Inter-rater reliability: Cohen's κ = 0.33–0.37, reflecting the genuine diffic
 | GPT-OSS 120B | 120B | 
 
 
-Datasets → Models → CoT Prompt → 540 Responses → Manual Labelling → Analysis
+Datasets → Models → CoT Prompt → 540 Responses → AI Labelling → Analysis
 
 
 The stability analysis added 18 repeated and rephrased questions to test whether reasoning paths are consistent across prompt variants.
