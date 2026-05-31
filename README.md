@@ -80,6 +80,9 @@ Most evaluations run each question once. The stability analysis here systematica
 
 Across 540 total responses, 6 latent hallucinations were found. Every single one was in Llama 3.1 8B, on the custom cognitive-trap dataset. Zero latent hallucinations appeared in any other model or on either benchmark dataset.
 
+<img width="1420" height="790" alt="chart1_lh_profile" src="https://github.com/user-attachments/assets/a1645e18-bc8c-44bd-b7b1-be0ef0897ad3" />
+
+
 **Question structure predicts failure type**
 
 All 6 instances share the same profile: reasoning load 2-4 out of 5, retrievable answers, and a specific cognitive vulnerability. The model retrieves the correct answer from training and then constructs reasoning to justify it after the fact. Four vulnerability types were identified:
@@ -91,13 +94,22 @@ All 6 instances share the same profile: reasoning load 2-4 out of 5, retrievable
 | Causal Trap | The obvious causal direction must be rejected |
 | Conditional Dependency | The answer requires resolving a self-referential condition |
 
+<img width="1781" height="612" alt="chart3_dataset_taxonomy" src="https://github.com/user-attachments/assets/10afe209-0156-4654-8215-a69f186900c3" />
+
+
 **Reasoning is fundamentally unstable**
 
 Across 18 repeated and rephrased questions, not one produced a consistent reasoning path, even when the final answer stayed the same. The reasoning is post-hoc, not principled.
 
+<img width="1600" height="877" alt="chart4_accuracy_comparison" src="https://github.com/user-attachments/assets/1ece8c36-7bb0-45d1-84fc-487bc496f0e5" />
+
+
 **Reasoning quality follows capability**
 
 AQuA-RAT results show a clear gradient: weak models produce flawed reasoning, mid-tier models produce a mix, and strong models produce shallow-but-correct responses. Qwen3 32B is an exception — its explicit think blocks expose failures that hidden chain-of-thought would mask.
+
+<img width="1612" height="883" alt="chart2_quality_gradient" src="https://github.com/user-attachments/assets/9850e3e6-36b5-4b9e-9935-41c1bfe542e9" />
+
 
 **The two-condition framework**
 
